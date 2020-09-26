@@ -11,8 +11,9 @@ public class SC_Object {
     protected Size size;                // 크기
 
     /* Constructor */
-    SC_Object( final int MAX_HP, final ProducingCost pc, final Position ps, final Size size) {
+    public SC_Object(final int MAX_HP, final ProducingCost pc, final Position ps, final Size size) {
         this.MAX_HP = MAX_HP;
+        this.cur_HP = MAX_HP;
         this.pc = pc;
         this.ps = ps;
         this.size = size;
@@ -27,6 +28,10 @@ public class SC_Object {
     public Position getPs() { return ps; }
     public Size getSize() { return size; }
 
+    public void setCur_HP(int cur_HP) {
+        this.cur_HP = cur_HP;
+    }
+
     /* Instance Methods */
     
     /* 죽음 메서드 */
@@ -37,49 +42,4 @@ public class SC_Object {
     public void beSelected() {
         /* Commnader의 선택된 오브젝트로 들어감 */
     }
-}
-
-
-
-/* 해당 SC_Object를 생성하는 데 필요한 비용 */
-class ProducingCost {
-    final private int mineral, gas, ptime;
-
-    ProducingCost(final int mineral, final int gas, final int ptime) {
-        this.mineral = mineral;
-        this.gas = gas;
-        this.ptime = ptime;
-    }
-
-    public int getMineral() { return mineral; }
-    public int getGas() { return gas; }
-    public int getPTime() { return ptime; }
-}
-
-/* SC_Object의 위치 값 */
-class Position {
-    private int x, y;
-
-    Position(final int x, final int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getX() { return x; }
-    public int getY() { return y; }
-    public void setX(final int x) { this.x = x; }
-    public void setY(final int y) { this.y = y; }
-}
-
-/* SC_Object의 크기 */
-class Size {
-    private final int width, length;
-
-    Size(final int width, final int length) {
-        this.width = width;
-        this.length = length;
-    }
-
-    public int getWidth() { return width; }
-    public int getLength() { return length; }
 }
