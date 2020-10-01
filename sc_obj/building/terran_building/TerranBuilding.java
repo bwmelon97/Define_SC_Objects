@@ -7,8 +7,8 @@ import sc_obj.building.Building;
 import sc_obj.races.Terran;
 
 public class TerranBuilding extends Building implements Terran {    
-    public TerranBuilding (final int MAX_HP, final ProducingCost pc, final Position ps, final Size size) {
-        super( MAX_HP, pc, ps, size );
+    public TerranBuilding (final int MAX_HP, final ProducingCost pc, final Position ps) {
+        super( MAX_HP, pc, ps);
     }
 
     /* Thread Coding 익히기 전까지 구현하지 못할 듯 */

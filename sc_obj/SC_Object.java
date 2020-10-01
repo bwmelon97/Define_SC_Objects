@@ -11,12 +11,11 @@ public class SC_Object {
     protected Size size;                // 크기
 
     /* Constructor */
-    public SC_Object(final int MAX_HP, final ProducingCost pc, final Position ps, final Size size) {
+    public SC_Object(final int MAX_HP, final ProducingCost pc, final Position ps) {
         this.MAX_HP = MAX_HP;
         this.cur_HP = MAX_HP;
         this.pc = pc;
         this.ps = ps;
-        this.size = size;
     }
 
     /* Static Methods */
