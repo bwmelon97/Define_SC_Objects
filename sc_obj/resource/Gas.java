@@ -16,7 +16,7 @@ public class Gas extends Resource {
     public Gas(Position ps, final int initAmount) {
         super(ps, initAmount);
 
-        Size size = new Size(200, 100);
+        Size size = new Size(40, 20);
 
         this.size = size;
         this.isExhausted = false;

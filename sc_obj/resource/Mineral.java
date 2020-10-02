@@ -11,7 +11,7 @@ public class Mineral extends Resource {
 
     public Mineral(Position ps, final int initAmount) {
         super(ps, initAmount);
-        Size size = new Size(100, 50);
+        Size size = new Size(20, 10);
         this.size = size;
     }
 
