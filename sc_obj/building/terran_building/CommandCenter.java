@@ -8,7 +8,7 @@ import sc_obj.*;
 
 /* 커멘드 센터 */
 public class CommandCenter extends TerranBuilding 
-implements Liftable, Supplier, Producer, Unlocker
+implements Liftable, Supplier, Producer, Unlocker, Repairable
 {
     LiftableImpl l = new LiftableImpl();
     SupplierImpl s = new SupplierImpl(10);
@@ -49,4 +49,11 @@ implements Liftable, Supplier, Producer, Unlocker
     /* Unlocker Methods */
     @Override
     public void unlock(Object o) { u.unlock(o); }
+
+    /* Building의 미구현 메서드 */
+    @Override
+    public boolean isBuildable(Position ps) {
+        /* 해당 위치에 건물을 지을 수 있는 지의 여부 */
+        return true;
+    }
 }

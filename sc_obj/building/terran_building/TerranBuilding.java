@@ -6,7 +6,7 @@ import sc_obj.*;
 import sc_obj.building.Building;
 import sc_obj.races.Terran;
 
-public class TerranBuilding extends Building implements Terran {    
+public abstract class TerranBuilding extends Building implements Terran {    
     
     private boolean isBurning;  // 불타고 있는 지 여부
     
