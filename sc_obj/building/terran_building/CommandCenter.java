@@ -49,11 +49,4 @@ implements Liftable, Supplier, Producer, Unlocker, Repairable
     /* Unlocker Methods */
     @Override
     public void unlock(Object o) { u.unlock(o); }
-
-    /* Building의 미구현 메서드 */
-    @Override
-    public boolean isBuildable(Position ps) {
-        /* 해당 위치에 건물을 지을 수 있는 지의 여부 */
-        return true;
-    }
 }

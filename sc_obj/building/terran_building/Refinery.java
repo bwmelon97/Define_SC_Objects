@@ -24,5 +24,4 @@ implements GasStation, Repairable
     /* GasStaion 메서드 구현 */
     @Override
     public int beExtracted() { return g.beExtracted(); }
-    public boolean isBuildable(Position ps) { return g.isBuildable(ps); }
 }

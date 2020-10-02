@@ -8,5 +8,7 @@ public abstract class Building extends SC_Object {
     }
 
     /* 건물을 지을 수 있는 지 없는 지를 알려주는 메서드 */
-    public abstract boolean isBuildable( Position ps );
+    public static boolean isBuildable( Position ps, Size size ) {
+        return true;
+    }
 }
