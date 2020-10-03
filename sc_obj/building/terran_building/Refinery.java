@@ -26,7 +26,16 @@ implements GasStation, Repairable
         return GasStation.isBuildable(ps);
     }
 
+    /* Building의 isBuildable 규칙은 따르지 않도록 함. */
+    public static boolean isBuildable(Position ps, Size size) {
+        System.out.println("리파이너리는 Building의 isBuildable 규칙을 따르지 않습니다.")
+        return false;
+    }
+
     /* GasStaion 메서드 구현 */
     @Override
     public int beExtracted() { return g.beExtracted(); }
+
+    @Override
+    public Gas getGasResource() { return g.getGasResource(); }
 }

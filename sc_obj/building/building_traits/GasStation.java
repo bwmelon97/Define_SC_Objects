@@ -1,6 +1,7 @@
 package sc_obj.building.building_traits;
 
 import sc_obj.*;
+import sc_obj.resource.Gas;
 
 public interface GasStation {
 
@@ -14,4 +15,5 @@ public interface GasStation {
     }
 
     int beExtracted();                  // 가스 추출되기 메서드 (기본 8 감소, 고갈되면 2 감소)
+    Gas getGasResource();
 }
