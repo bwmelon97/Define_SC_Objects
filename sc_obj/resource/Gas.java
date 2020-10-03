@@ -5,24 +5,29 @@ import sc_obj.resource.Resource;
 
 public class Gas extends Resource {
     
-    private boolean isExhausted;
-    private boolean hasStation;
+    private static final Size size = new Size(40, 20);  // Gas의 사이즈
+
+    private boolean isExhausted;                        // 고갈되었는지 여부
+    private boolean hasStation;                         // GasStation을 갖고 있는지
     /* private Commander owner */
 
-    public Gas(Position ps) {
-        this(ps, 5000);
-    }
-
+    /* Constructor */
     public Gas(Position ps, final int initAmount) {
         super(ps, initAmount);
 
-        Size size = new Size(40, 20);
-
-        this.size = size;
         this.isExhausted = false;
         this.hasStation = false;
         /* this.owner = null */
     }
+
+    /* init amount를 설정하지 않는 경우는 기본 5000 */
+    public Gas(Position ps) {
+        this(ps, 5000);
+    }
+
+
+    /* 가스 영역 사이즈 getter 메서드 */
+    public static Size getSize() { return size; }
 
     public boolean isExhausted() { return isExhausted; }
     public boolean hasStation() { return hasStation; }

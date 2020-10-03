@@ -9,17 +9,24 @@ import sc_obj.resource.Gas;
 public class Refinery extends TerranBuilding 
 implements GasStation, Repairable 
 {
+    /* Static Properties */
+    private static final int MAX_HP = 750;
+    private static final Size size = new Size(40, 20);
+    private static final ProducingCost pc = new ProducingCost(100, 0, 40);
+
+    /* Interface Implement Class */
     GasStationImpl g;
     
+    /* Constructor */
     public Refinery( Position ps, Gas gasResource ) {
-        super(750, ps);
-        ProducingCost pc = new ProducingCost(100, 0, 40);
-        Size size = new Size(40, 20);
-        
-        this.pc = pc;
-        this.size = size;
+        super(ps);
         this.g = new GasStationImpl(gasResource);
     }
+
+    /* Getter Methods */
+    public static int getMaxHp() { return MAX_HP; }
+    public static ProducingCost getPc() { return pc; }
+    public static Size getSize() { return size; }
     
     /* 리파이너리의 isBuildable은 GasStation의 규칙을 따른다. */
     public static boolean isBuildable(Position ps) {
@@ -28,7 +35,7 @@ implements GasStation, Repairable
 
     /* Building의 isBuildable 규칙은 따르지 않도록 함. */
     public static boolean isBuildable(Position ps, Size size) {
-        System.out.println("리파이너리는 Building의 isBuildable 규칙을 따르지 않습니다.")
+        System.out.println("리파이너리는 Building의 isBuildable 규칙을 따르지 않습니다.");
         return false;
     }
 

@@ -5,15 +5,19 @@ import sc_obj.resource.Resource;
 
 public class Mineral extends Resource {
 
+    private static final Size size = new Size(20, 10);
+    
+    /* Constructor */
+    public Mineral(Position ps, final int initAmount) {
+        super(ps, initAmount);
+    }
+    /* init amount 없는 경우는 1500 */
     public Mineral(Position ps) {
         this(ps, 1500);
     }
 
-    public Mineral(Position ps, final int initAmount) {
-        super(ps, initAmount);
-        Size size = new Size(20, 10);
-        this.size = size;
-    }
+    /* Size getter 메서드 */
+    public static Size getSize() { return size; }
 
     /* 자원 채집 메서드 */
     @Override

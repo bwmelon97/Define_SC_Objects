@@ -7,8 +7,7 @@ public abstract class Resource extends SC_Object {
     protected int amount;          // 자원량
 
     public Resource(final Position ps, final int initAmount) {
-        super(0, ps);
-        this.pc = null;
+        super(ps);
         this.amount = initAmount;
     }
 
