@@ -4,9 +4,12 @@ import sc_obj.*;
 
 public interface GasStation {
 
-    /* 건물을 지을 수 있는 위치인지 알려주는 메서드 */
-    static boolean isBuildable(Position ps, Size size) {    
+    /* 건물을 지을 수 있는 위치인지 알려주는 메서드 
+       가스 위에만 건설할 수 있는 GasStaion의 isBuildable 규칙
+       리파이너리, 어시밀레이터, 익스트레터 만 이 규칙을 따른다. */
+    static boolean isBuildable(Position ps) {    
         /* 가스 위에서만 지을 수 있도록 해야 함 */
+        System.out.println("GasStation의 isBuildable");
         return true;
     }
 

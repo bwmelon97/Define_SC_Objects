@@ -21,6 +21,11 @@ implements GasStation, Repairable
         this.g = new GasStationImpl(gasResource);
     }
     
+    /* 리파이너리의 isBuildable은 GasStation의 규칙을 따른다. */
+    public static boolean isBuildable(Position ps) {
+        return GasStation.isBuildable(ps);
+    }
+
     /* GasStaion 메서드 구현 */
     @Override
     public int beExtracted() { return g.beExtracted(); }

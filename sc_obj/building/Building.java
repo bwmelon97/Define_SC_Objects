@@ -2,13 +2,15 @@ package sc_obj.building;
 
 import sc_obj.*;
 
-public abstract class Building extends SC_Object {
+public class Building extends SC_Object {
     public Building (final int MAX_HP, final Position ps) {
         super( MAX_HP, ps);
     }
 
-    /* 건물을 지을 수 있는 지 없는 지를 알려주는 메서드 */
+    /* 건물을 지을 수 있는 지 없는 지를 알려주는 메서드 
+       특수 케이스 (가스, 프로토스, 저그 등)를 제외한 기본 건물들의 isBuildable 규칙 */
     public static boolean isBuildable( Position ps, Size size ) {
+        System.out.println("Building의 isbuildable");
         return true;
     }
 }
