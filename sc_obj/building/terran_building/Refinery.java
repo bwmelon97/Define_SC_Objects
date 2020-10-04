@@ -6,7 +6,7 @@ import sc_obj.building.building_traits.*;
 import sc_obj.common_traits.*;
 import sc_obj.resource.Gas;
 
-public class Refinery extends TerranBuilding 
+public final class Refinery extends TerranBuilding 
 implements GasStation, Repairable 
 {
     /* Static Properties */

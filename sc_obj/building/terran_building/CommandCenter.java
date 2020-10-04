@@ -8,7 +8,7 @@ import sc_obj.unit.Unit;
 import sc_obj.*;
 
 /* 커멘드 센터 */
-public class CommandCenter extends TerranBuilding 
+public final class CommandCenter extends TerranBuilding 
 implements Liftable, Supplier, Producer, Unlocker, Repairable
 {
     /* Static Properties */

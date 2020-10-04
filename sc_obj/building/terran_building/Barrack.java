@@ -7,7 +7,7 @@ import sc_obj.building.Building;
 import sc_obj.common_traits.*;
 import sc_obj.unit.Unit;
 
-public class Barrack extends TerranBuilding
+public final class Barrack extends TerranBuilding
 implements Liftable, Producer, Unlocker, Repairable
 {
     /* Static Properties */
