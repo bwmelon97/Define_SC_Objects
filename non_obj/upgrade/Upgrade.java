@@ -1,4 +1,4 @@
-package upgrade;
+package non_obj.upgrade;
 
 import sc_obj.ProducingCost;
 

@@ -1,7 +1,6 @@
-package upgrade.ability_upgrade;
+package non_obj.upgrade.ability_upgrade;
 
-import upgrade.Upgrade;
-
+import non_obj.upgrade.Upgrade;
 import sc_obj.ProducingCost;
 
 public abstract class AbilityUpgrade extends Upgrade {
