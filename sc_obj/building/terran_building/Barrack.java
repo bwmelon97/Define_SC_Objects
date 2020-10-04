@@ -1,5 +1,7 @@
 package sc_obj.building.terran_building;
 
+import java.util.ArrayList;
+
 import sc_obj.*;
 import sc_obj.building.terran_building.TerranBuilding;
 import sc_obj.building.building_traits.*;
@@ -56,4 +58,5 @@ implements Liftable, Producer, Unlocker, Repairable
     /* Unlocker Methods */
     @Override
     public void unlock(Object o) { u.unlock(o); }
+    public ArrayList<Object> getUnlockList() { return u.getUnlockList(); }
 }

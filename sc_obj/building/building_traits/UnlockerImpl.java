@@ -6,10 +6,13 @@ import sc_obj.building.building_traits.Unlocker;
 
 public class UnlockerImpl implements Unlocker {
     
-    private ArrayList<Object> unlockList = new ArrayList<Object>();     // 잠금을 풀 수 있는 리스트 (나중에 Object 대신, SC_Object와 Upgrade를 묶는 객체 생성 필요)
+    /* 잠금을 풀 수 있는 리스트 (나중에 Object 대신, SC_Object와 Upgrade를 묶는 객체 생성 필요) */
+    private ArrayList<Object> unlockList = new ArrayList<Object>();     
 
+    /* UnlockList getter method */
     public ArrayList<Object> getUnlockList() { return unlockList; }
 
+    /* UnlockList에 멤버 추가 메서드 */
     public void addUnlockList(Object o) {
         this.unlockList.add(o);
     }

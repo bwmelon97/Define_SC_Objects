@@ -5,6 +5,9 @@ import sc_obj.building.Building;
 import sc_obj.building.building_traits.*;
 import sc_obj.common_traits.*;
 import sc_obj.unit.Unit;
+
+import java.util.ArrayList;
+
 import sc_obj.*;
 
 /* 커멘드 센터 */
@@ -62,4 +65,5 @@ implements Liftable, Supplier, Producer, Unlocker, Repairable
     /* Unlocker Methods */
     @Override
     public void unlock(Object o) { u.unlock(o); }
+    public ArrayList<Object> getUnlockList() { return u.getUnlockList(); }
 }
