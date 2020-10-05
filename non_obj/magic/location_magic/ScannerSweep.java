@@ -11,4 +11,9 @@ public final class ScannerSweep extends LocationMagic {
     public ScannerSweep () {
         super(ENERGY_COST);
     }
+
+    @Override
+    public void useMagic() {
+        System.out.println("똥가루 뿌리기~");
+    }
 }

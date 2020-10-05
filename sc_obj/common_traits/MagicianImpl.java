@@ -14,7 +14,7 @@ public class MagicianImpl implements Magician {
 
     /* Constructor */
     public MagicianImpl() {
-        this.curMP = 50;
+        this.curMP = 200;
     }
 
     @Override
@@ -47,6 +47,9 @@ public class MagicianImpl implements Magician {
         }
 
         /* 마법 사용 !! */
+        magic.useMagic();
+        this.curMP = this.curMP - magic.getENERGY_COST();
+
         return true;
     }
 }
