@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import non_obj.upgrade.Upgrade;
 
 public interface Upgrader {
-    ArrayList<Upgrade> upgradeList = new ArrayList<Upgrade>();    // 가능한 업그레이드 리스트
-    void produce(/* Commander commander , */ Upgrade upgrade);    // 업그레이드 메서드
+    void upgrade(/* Commander commander , */ Upgrade upgrade);    // 업그레이드 메서드
+    ArrayList<Upgrade> getUpgradeList();
+    // void addUpgradeList(Upgrade upgrade);
 }
